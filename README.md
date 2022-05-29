@@ -21,4 +21,4 @@ Container in java is package and in .NET is namespace
 #### like photoshop type tools selection
 ![state uml](/state_pattern/pictures/state_pattern.png)
 ![state uml](/state_pattern/pictures/state_pattern2.png)
-#### SOLOD (Open Closed Principle)****
+#### SOLOD (Open Closed Principle)
