@@ -28,6 +28,4 @@ Container in java is package and in .NET is namespace
 ## Iterator pattern
 #### SOLOD (Single Responsibility Principle)
 #### like browser histroty when you go to previews url of next url
-![iterator uml](/iterator_pattern/pictures/iterator_pattern1.png)
-![iterator uml](/iterator_pattern/pictures/iterator_pattern2.png)
-![iterator uml](/iterator_pattern/pictures/iterator_pattern3.png)
+![iterator uml](/iterator_pattern/pictures/iterator_pattern.png)
