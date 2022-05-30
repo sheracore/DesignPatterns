@@ -1,4 +1,5 @@
 from collections import deque
+from Iterator import Iterator
 
 
 class BrowserHistory:
@@ -18,5 +19,21 @@ class BrowserHistory:
     def push(self, url):
         self._urls.push(url)
 
-    def get_urls(self):
-        return self._urls
+    def create_iterator(self):
+        from
+        return ListIterator(self);
+
+    class ListIterator(Iterator):
+        def __init__(self):
+            self._history = BrowserHistory()
+            self._index = int()
+
+        def has_next(self):
+            return self._index < len(self._history._urls)
+
+        def current(self):
+            return self._history._urls(self._index)
+
+        def next(self):
+            self._index += 1
+
