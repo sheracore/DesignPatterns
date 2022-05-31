@@ -26,6 +26,8 @@ Container in java is package and in .NET is namespace
 
 
 ## Iterator pattern
-#### SOLOD (Single Responsibility Principle)
 #### like browser histroty when you go to previews url of next url
+#### Single Responsibility Principle: It’s really easy to extract the huge algorithms into separate classes in the Iterator method.
+#### Open/Closed Principle: Passing the new iterators and collections into the client code does not break the code can easily be installed into it.
+#### Easy to use Interface: It makes the interface really simple to use and also supports the variations in the traversal of the collections.
 ![iterator uml](/iterator_pattern/pictures/iterator_pattern.png)
