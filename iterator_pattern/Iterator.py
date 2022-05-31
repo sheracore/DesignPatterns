@@ -1,10 +1,12 @@
 class Iterator:
-    """As Interface"""
-    def has_next(self):
-        pass
+    def __init__(self, items):
+        self.indx = 0
+        self.items = items
 
-    def current(self):
-        pass
+    def has_next(self):
+        return False if self.indx >= len(self.items) else True
 
     def next(self):
-        pass
+        item = self.items[self.indx]
+        self.indx += 1
+        return item

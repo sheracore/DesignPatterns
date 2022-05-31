@@ -1,10 +1,17 @@
-from BrowseHistory import BrowserHistory
+from Item import Item
+from Iterable import Iterable
 
 if __name__ == '__main__':
-    history = BrowserHistory()
-    history.push('a')
-    history.push('b')
-    history.push('c')
+    i1 = Item("Burger", 7)
+    i2 = Item("Pizza", 8)
+    i3 = Item("Coke", 5)
 
-    for url in history.get_urls:
-        print(url)
+    menu = Iterable()
+    menu.add(i1)
+    menu.add(i2)
+    menu.add(i3)
+
+    iterator = menu.iterator()
+    while iterator.has_next():
+        item = iterator.next()
+        print(item)
