@@ -31,3 +31,10 @@ Container in java is package and in .NET is namespace
 #### Open/Closed Principle: Passing the new iterators and collections into the client code does not break the code can easily be installed into it.
 #### Easy to use Interface: It makes the interface really simple to use and also supports the variations in the traversal of the collections.
 ![iterator uml](/iterator_pattern/pictures/iterator_pattern.png)
+
+
+## Strategy Pattern
+#### Single Responsibility Principle and Open/Closed Principle
+![iterator uml](/strategy_pattern/pictures/strategy_pattern1.png)
+![strategy uml](/strategy_pattern/pictures/strategy_pattern2.png)
+![strategy uml](/strategy_pattern/pictures/strategy_pattern3.png)
