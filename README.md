@@ -33,8 +33,13 @@ Container in java is package and in .NET is namespace
 ![iterator uml](/iterator_pattern/pictures/iterator_pattern.png)
 
 
-## Strategy Pattern
+## Strategy pattern
 #### Single Responsibility Principle and Open/Closed Principle
 ![iterator uml](/strategy_pattern/pictures/strategy_pattern1.png)
 ![strategy uml](/strategy_pattern/pictures/strategy_pattern2.png)
 ![strategy uml](/strategy_pattern/pictures/strategy_pattern3.png)
+
+## Template pattern
+![template uml](/template_pattern/pictures/template_pattern1.png)
+![template uml](/template_pattern/pictures/template_pattern2.png)
+![template uml](/template_pattern/pictures/template_pattern3.png)
