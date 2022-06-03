@@ -57,6 +57,7 @@ Container in java is package and in .NET is namespace
 * Parallel processing or thread pools
 * Transactional behaviour
 * Wizards
+
 ![command uml](/command_pattern/pictures/command_pattern1.png)
 ![command uml](/command_pattern/pictures/command_pattern.png)
 
