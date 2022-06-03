@@ -45,6 +45,18 @@ Container in java is package and in .NET is namespace
 ![template uml](/template_pattern/pictures/template_pattern3.png)
 
 ## Command pattern
+#### The Command pattern is a behavioural design pattern, in which an abstraction exists between an object that invokes a command, and the object that performs it.
+#### E.g., a button will call the Invoker, that will call a pre-registered Command, that the Receiver will perform.
+#### The command pattern is a good solution for implementing UNDO/REDO functionality into your application.
+### Uses:
+
+* GUI Buttons, menus
+* Macro recording
+* Multi-level undo/redo
+* Networking — send whole command objects across a network, even as a batch
+* Parallel processing or thread pools
+* Transactional behaviour
+* Wizards
 ![command uml](/command_pattern/pictures/command_pattern1.png)
 ![command uml](/command_pattern/pictures/command_pattern.png)
 
