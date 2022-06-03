@@ -59,6 +59,6 @@ Container in java is package and in .NET is namespace
 * Wizards
 
 ![command uml](/command_pattern/pictures/command_pattern1.png)
-![command uml](/command_pattern/pictures/command_pattern.png)
+![command uml](/command_pattern/pictures/command_pattern3.png)
 
 
