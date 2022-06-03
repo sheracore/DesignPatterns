@@ -45,6 +45,7 @@ Container in java is package and in .NET is namespace
 ![template uml](/template_pattern/pictures/template_pattern3.png)
 
 ## Command pattern
+![command uml](/command_pattern/pictures/command_pattern1.png)
 ![command uml](/command_pattern/pictures/command_pattern.png)
 
 
