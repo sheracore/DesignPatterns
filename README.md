@@ -61,4 +61,5 @@ Container in java is package and in .NET is namespace
 ![command uml](/command_pattern/pictures/command_pattern1.png)
 ![command uml](/command_pattern/pictures/command_pattern3.png)
 
-
+## Observer pattern
+#### The Observer pattern is a software design pattern in which an object, called the Subject (Observable), manages a list of dependents, called Observers, and notifies them automatically of any internal state changes by calling one of their methods.
