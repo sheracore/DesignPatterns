@@ -64,4 +64,16 @@ Container in java is package and in .NET is namespace
 ## Observer pattern
 #### The Observer pattern is a software design pattern in which an object, called the Subject (Observable), manages a list of dependents, called Observers, and notifies them automatically of any internal state changes by calling one of their methods.
 #### The Observer pattern follows the publish/subscribe concept. A subscriber, subscribes to a publisher. The publisher then notifies the subscribers when necessary.
+![observer uml](/observer_pattern/pictures/observer_pattern.png)
+![observer uml](/observer_pattern/pictures/observer_pattern2.png)
+![observer uml](/observer_pattern/pictures/observer_pattern3.png)
+![observer uml](/observer_pattern/pictures/observer_pattern4.png)
+
+## Mediator pattern
+![mediator uml](/mediator_pattern/pictures/mediator_pattern.png)
+![mediator uml](/mediator_pattern/pictures/mediator_pattern2.png)
+![mediator uml](/mediator_pattern/pictures/mediator_pattern3.png)
+![mediator uml](/mediator_pattern/pictures/mediator_pattern4.png)
+
+
 
