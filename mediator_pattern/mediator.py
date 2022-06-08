@@ -9,4 +9,5 @@ class Mediator(ABC):
     """
 
     def notify(self, sender: object, event: str) -> None:
+        print("I'm in the abc mediator")
         pass
