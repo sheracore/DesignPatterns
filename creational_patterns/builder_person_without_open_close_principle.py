@@ -40,15 +40,15 @@ class PersonJobBuilder(PersonBuilder):
 
     def at(self, company_name):
         self.person.company_name = company_name
-        return self
+        return self  # Return self for method chaining
 
     def as_a(self, position):
         self.person.position = position
-        return self
+        return self  # Return self for method chaining
 
     def earning(self, annual_income):
         self.person.annual_income = annual_income
-        return self
+        return self  # Return self for method chaining
 
 
 class PersonAddressBuilder(PersonBuilder):
@@ -57,15 +57,15 @@ class PersonAddressBuilder(PersonBuilder):
 
     def at(self, street_address):
         self.person.street_address = street_address
-        return self
+        return self  # Return self for method chaining
 
     def with_postcode(self, postcode):
         self.person.postcode = postcode
-        return self
+        return self  # Return self for method chaining
 
     def in_city(self, city):
         self.person.city = city
-        return self
+        return self  # Return self for method chaining
 
 
 if __name__ == '__main__':

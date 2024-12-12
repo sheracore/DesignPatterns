@@ -47,7 +47,7 @@ class HtmlBuilder:
         self.__root.elements.append(
             HtmlElement(child_name, child_text)
         )
-        return self
+        return self # Return self for method chaining
 
     def clear(self):
         self.__root = HtmlElement(name=self.root_name)

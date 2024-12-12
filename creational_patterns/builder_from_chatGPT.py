@@ -12,16 +12,16 @@ class House:
 
 # Builder: Abstract Builder Interface
 class HouseBuilder:
-    def build_foundation(self):
+    def build_foundation(self, foundation):
         pass
 
-    def build_structure(self):
+    def build_structure(self, structure):
         pass
 
-    def build_roof(self):
+    def build_roof(self, roof):
         pass
 
-    def build_interior(self):
+    def build_interior(self, interior):
         pass
 
     def get_house(self):
@@ -32,43 +32,34 @@ class ConcreteHouseBuilder(HouseBuilder):
     def __init__(self):
         self.house = House()
 
-    def build_foundation(self):
-        self.house.foundation = "Concrete, brick, and stone"
+    def build_foundation(self, foundation):
+        self.house.foundation = foundation
+        return self  # Return self for method chaining
 
-    def build_structure(self):
-        self.house.structure = "Wooden and brick walls"
+    def build_structure(self, structure):
+        self.house.structure = structure
+        return self  # Return self for method chaining
 
-    def build_roof(self):
-        self.house.roof = "Concrete and shingles"
+    def build_roof(self, roof):
+        self.house.roof = roof
+        return self  # Return self for method chaining
 
-    def build_interior(self):
-        self.house.interior = "Modern interior design"
+    def build_interior(self, interior):
+        self.house.interior = interior
+        return self  # Return self for method chaining
 
     def get_house(self):
         return self.house
 
-# Director: Orchestrates the building process
-class Director:
-    def __init__(self, builder: HouseBuilder):
-        self.builder = builder
-
-    def construct_house(self):
-        self.builder.build_foundation()
-        self.builder.build_structure()
-        self.builder.build_roof()
-        self.builder.build_interior()
 
 # Client Code
 if __name__ == "__main__":
     # Create a Concrete Builder
     builder = ConcreteHouseBuilder()
+    builder.build_foundation("Concrete, brick, and stone")\
+           .build_roof("Concrete and shingles")\
+           .build_structure("Wooden and brick walls")\
+           .build_interior("Modern interior design")
+    print(builder.get_house())
 
-    # Director takes the builder
-    director = Director(builder)
 
-    # Construct the house
-    director.construct_house()
-
-    # Get the final product
-    house = builder.get_house()
-    print(house)
