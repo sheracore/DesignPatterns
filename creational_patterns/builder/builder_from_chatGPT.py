@@ -38,15 +38,15 @@ class ConcreteHouseBuilder(HouseBuilder):
 
     def build_structure(self, structure):
         self.house.structure = structure
-        return self  # Return self for method chaining
+        return self
 
     def build_roof(self, roof):
         self.house.roof = roof
-        return self  # Return self for method chaining
+        return self
 
     def build_interior(self, interior):
         self.house.interior = interior
-        return self  # Return self for method chaining
+        return self
 
     def get_house(self):
         return self.house
