@@ -6,6 +6,7 @@ class Database:
     def __init__(self):
         self.id = random.randint(1,101)
         print('Generated an id of ', self.id)
+        print("Loading database")
 
     def __new__(cls, *args, **kwargs):
         if not cls._instance:
