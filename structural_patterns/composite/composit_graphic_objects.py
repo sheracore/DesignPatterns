@@ -22,16 +22,17 @@ class GraphicObject:
         return ''.join(items)
 
 
+class Square(GraphicObject):
+    @property
+    def name(self):
+        return 'Square'
+
+
 class Circle(GraphicObject):
     @property
     def name(self):
         return 'Circle'
 
-
-class Square(GraphicObject):
-    @property
-    def name(self):
-        return 'Square'
 
 
 if __name__ == '__main__':
@@ -41,8 +42,8 @@ if __name__ == '__main__':
     drawing.children.append(Circle('Yellow'))
 
     group = GraphicObject()  # no name
-    group.children.append(Circle('Blue'))
     group.children.append(Square('Blue'))
+    group.children.append(Circle('Blue'))
     drawing.children.append(group)
 
     print(drawing)
