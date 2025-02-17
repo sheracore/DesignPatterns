@@ -38,26 +38,21 @@ class ProductFilter:
     # 3 criteria
     # c s w cs sw cw csw = 7 methods
 
+    # OCP = open for extension, closed for modification
 
 # Enterprise Patterns: Specification
-
-
 class Specification:
     def is_satisfied(self, item):
         pass
 
+    # and operator makes life easier
+    def __and__(self, other):
+        return AndSpecification(self, other)
+
 
 class Filter:
-    def filter(self, item, spec: Specification):
+    def filter(self, items, spec):
         pass
-
-
-class SizeSpecification(Specification):
-    def __init__(self, size):
-        self.size = size
-
-    def is_satisfied(self, item):
-        return self.size == item.size
 
 
 class ColorSpecification(Specification):
@@ -65,41 +60,62 @@ class ColorSpecification(Specification):
         self.color = color
 
     def is_satisfied(self, item):
-        return self.color == item.color
+        return item.color == self.color
+
+
+class SizeSpecification(Specification):
+    def __init__(self, size):
+        self.size = size
+
+    def is_satisfied(self, item):
+        return item.size == self.size
 
 
 class AndSpecification(Specification):
     def __init__(self, spec1, spec2):
-        self.spec1 = spec1
         self.spec2 = spec2
+        self.spec1 = spec1
 
     def is_satisfied(self, item):
-        return self.spec1.is_satisfied(item) and self.spec2.is_satisfied(item)
+        return self.spec1.is_satisfied(item) and \
+               self.spec2.is_satisfied(item)
 
 
 class BetterFilter(Filter):
-    def filter(self, item_list, spec):
-        for item in item_list:
+    def filter(self, items, spec):
+        for item in items:
             if spec.is_satisfied(item):
                 yield item
 
 
-bf = BetterFilter()
-
 apple = Product('Apple', Color.GREEN, Size.SMALL)
 tree = Product('Tree', Color.GREEN, Size.LARGE)
 house = Product('House', Color.BLUE, Size.LARGE)
+
 products = [apple, tree, house]
 
-size_large = SizeSpecification(Size.LARGE)
+pf = ProductFilter()
+print('Green products (old):')
+for p in pf.filter_by_color(products, Color.GREEN):
+    print(f' - {p.name} is green')
 
-for p in bf.filter(products, size_large):
-    print(p.name, "is large")
+# ^ BEFORE
 
-size_large = SizeSpecification(Size.LARGE)
-color_green = ColorSpecification(Color.GREEN)
+# v AFTER
+bf = BetterFilter()
 
-green_large = AndSpecification(size_large, color_green)
+print('Green products (new):')
+green = ColorSpecification(Color.GREEN)
+for p in bf.filter(products, green):
+    print(f' - {p.name} is green')
 
-for p in bf.filter(products, green_large):
-    print(p.name, "size: ",  p.size, "color: ", p.color, " combination")
+print('Large products:')
+large = SizeSpecification(Size.LARGE)
+for p in bf.filter(products, large):
+    print(f' - {p.name} is large')
+
+print('Large blue items:')
+# large_blue = large and ColorSpecification(Color.BLUE)
+large_blue = AndSpecification(large, ColorSpecification(Color.BLUE))
+for p in bf.filter(products, large_blue):
+    print(f' - {p.name} is large and blue')
