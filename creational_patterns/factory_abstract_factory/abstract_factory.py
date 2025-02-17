@@ -75,12 +75,12 @@ def make_drink(type):
 
 
 if __name__ == '__main__':
-    # it doesn't use factory interface class
+    # it doesn't use factory_abstract_factory interface class
     entry = input('What kind of drink would you like?')
     drink = make_drink(entry)
     drink.consume()
 
-    # it uses factory interface class
+    # it uses factory_abstract_factory interface class
     hdm = HotDrinkMachine()
     drink = hdm.make_drink()
     drink.consume()

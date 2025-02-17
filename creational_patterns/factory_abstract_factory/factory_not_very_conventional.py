@@ -26,7 +26,7 @@ class Point:
 
     factory = Factory()
 
-# take out factory methods to a separate class
+# take out factory_abstract_factory methods to a separate class
 class PointFactory:
     @staticmethod
     def new_cartesian_point(x, y):
@@ -40,7 +40,7 @@ class PointFactory:
 if __name__ == '__main__':
     p1 = Point(2, 3)
     p2 = PointFactory.new_cartesian_point(1, 2)
-    # or you can expose factory through the type
+    # or you can expose factory_abstract_factory through the type
     p3 = Point.Factory.new_cartesian_point(5, 6)
     p4 = Point.factory.new_cartesian_point(7, 8)
     print(p1, p2, p3, p4)
