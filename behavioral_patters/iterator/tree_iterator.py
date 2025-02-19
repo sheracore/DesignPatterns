@@ -78,6 +78,16 @@ if __name__ == '__main__':
                 Node(2),
                 Node(3))
 
+    #     1
+    #    / \
+    #   2   3
+    #  / \   \
+    # 10  20  30
+
+    root2 = Node(1,
+                Node(2, Node(10), Node(20)),
+                Node(3, right=Node(30)))
+
     it = iter(root)
 
     print([next(it).value for x in range(3)])
@@ -85,7 +95,7 @@ if __name__ == '__main__':
     for x in root:
         print(x.value)
 
-    for y in traverse_in_order(root):
+    for y in traverse_in_order(root2):
         print(y.value)
 
 
