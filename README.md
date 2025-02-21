@@ -60,7 +60,7 @@
 
 ## Observer pattern
 #### The Observer pattern is a software design pattern in which an object, called the Subject (Observable), manages a list of dependents, called Observers, and notifies them automatically of any internal state changes by calling one of their methods.
-#### The Observer pattern follows the publish/subscribe concept. A subscriber subscribes to a publisher. The publisher then notifies the subscribers when necessary.
+#### The Observer pattern follows the publish/subscribe concept. A subscriber subscribes to a publisher. The publisher then notifies the subscribers when its necessary.
 ![observer uml](/from_other_sources/observer_pattern/pictures/observer_pattern.png)
 ![observer uml](/from_other_sources/observer_pattern/pictures/observer_pattern1.png)
 ![observer uml](/from_other_sources/observer_pattern/pictures/observer_pattern2.png)
