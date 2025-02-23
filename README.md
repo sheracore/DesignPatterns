@@ -71,5 +71,7 @@
 ![mediator uml](/from_other_sources/mediator_pattern/pictures/mediator_pattern3.png)
 ![mediator uml](/from_other_sources/mediator_pattern/pictures/mediator_pattern4.png)
 
+* For example Chatroom application
+
 
 
