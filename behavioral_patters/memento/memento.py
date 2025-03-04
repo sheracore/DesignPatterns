@@ -1,6 +1,6 @@
 class Memento:
     def __init__(self, balance):
-        self.bank_account = BankAccount(balance)
+        self.bank_account = BankAccount(balance)  # TODO: Inefficient, because it's generating a lot of objects
 
     def __str__(self):
         return f'{self.bank_account.balance}'
